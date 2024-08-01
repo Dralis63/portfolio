@@ -21,14 +21,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const form = this;
     const formData = new FormData(form);
     
-    fetch(form.action, {
-        method: form.method,
-        body: formData
+    fetch('https://cors-anywhere.herokuapp.com/https://formspree.io/f/xvgpaqkj', {
+        method: 'POST',
+        body: new FormData(form)
     })
     .then(response => response.json())
     .then(data => {
         alert('Votre message a été envoyé !');
-        form.reset(); // Réinitialise le formulaire après l'envoi
+        form.reset();
     })
     .catch(error => {
         alert('Une erreur est survenue. Veuillez réessayer.');

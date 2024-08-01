@@ -347,8 +347,7 @@ nav ul li a {
 /* Contact */
 #contact {
     padding: 4rem 1rem;
-    background-color: white;
-    animation: fadeInUp 1s ease-in-out;
+    background-color: #f9f9f9; /* Couleur de fond */
 }
 
 #contact-form {
@@ -362,37 +361,35 @@ nav ul li a {
 
 #contact-form label {
     font-weight: 600;
-    font-size: 1.25rem;
 }
 
 #contact-form input, 
 #contact-form textarea {
     padding: 0.75rem;
-    border: 1px solid var(--background-color);
+    border: 1px solid #ddd;
     border-radius: 5px;
     transition: border-color 0.3s ease;
-    font-size: 1rem;
 }
 
 #contact-form input:focus, 
 #contact-form textarea:focus {
-    border-color: var(--primary-color);
+    border-color: #007acc; /* Couleur de bordure lors du focus */
 }
 
 #contact-form button {
-    background-color: var(--accent-color);
+    background-color: #ff4081; /* Couleur du bouton */
     color: white;
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #contact-form button:hover {
-    background-color: #333;
+    background-color: #e6306d; /* Couleur du bouton au survol */
 }
 
 /* Pied de page */

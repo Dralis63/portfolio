@@ -15,3 +15,22 @@ $(document).ready(function(){
     // Ré-ajuster lors du redimensionnement de la fenêtre
     $(window).on('resize', adjustIntroHeight);
 });
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+    
+    const form = this;
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Votre message a été envoyé !');
+        form.reset(); // Réinitialise le formulaire après l'envoi
+    })
+    .catch(error => {
+        alert('Une erreur est survenue. Veuillez réessayer.');
+    });
+});

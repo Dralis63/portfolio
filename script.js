@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Toggle menu
     $('.menu-toggle').click(function() {
         $('nav ul').toggleClass('show');
     });
@@ -25,9 +24,12 @@ document.getElementById('contact-form')?.addEventListener('submit', function(eve
     const form = this;
     const formData = new FormData(form);
 
-    fetch('https://formspree.io/f/xvgpaqkj', {
+    fetch(form.action, {
         method: 'POST',
-        body: formData
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
     })
     .then(response => {
         if (!response.ok) {

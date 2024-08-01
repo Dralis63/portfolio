@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Seb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <h1>PureCode</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="intro">
+        <div class="intro-overlay"></div>
+        <div class="intro-content">
+            <h1>Salut, je suis Seb !</h1>
+            <p>Je transforme des idées créatives en expériences web captivantes. En tant que développeur passionné, je conçois des solutions innovantes qui résonnent avec les utilisateurs.</p>
+            <p>Prêt à transformer votre vision en réalité ? <strong>Découvrons-le ensemble !</strong></p>
+            <a href="#contact" class="cta-button">Contactez-moi</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>À Propos de Moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis un développeur web avec une expertise en frontend et backend. J'ai travaillé sur divers projets allant de sites web de commerce électronique à des applications mobiles.</p>
+                    <p>Mon approche est axée sur l'utilisateur, en m'assurant que chaque projet offre une expérience fluide et intuitive.</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/about-me.jpg" alt="À propos de moi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/gamestore.png" alt="GAMESTORE">
+                    </div>
+                    <div class="project-details">
+                        <h3>GAMESTORE</h3>
+                        <p>Site web de vente de jeux vidéos avec une interface moderne et intuitive.</p><br>
+                        <a href="https://gamestore-online.alwaysdata.net/" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/gamestore.png" alt="ARENA ROYALE">
+                    </div>
+                    <div class="project-details">
+                        <h3>ARENA ROYALE</h3>
+                        <p>Application mobile de jeu vidéo développée avec React Native. Affrontez d'autres joueurs dans des arènes virtuelles.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres projets ici -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Compétences</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="skill-icon fas fa-laptop-code"></i>
+                    <h3>HTML & CSS</h3>
+                    <p>Création de sites web responsives avec HTML5 et CSS3.</p>
+                </div>
+                <div class="skill">
+                    <i class="skill-icon fas fa-code"></i>
+                    <h3>JavaScript</h3>
+                    <p>Développement interactif avec JavaScript ES6 et frameworks comme React.</p>
+                </div>
+                <div class="skill">
+                    <i class="skill-icon fas fa-database"></i>
+                    <h3>PHP</h3>
+                    <p>Développement côté serveur avec PHP et intégration de bases de données.</p>
+                </div>
+                <div class="skill">
+                    <i class="skill-icon fas fa-mobile-alt"></i>
+                    <h3>React & React Native</h3>
+                    <p>Développement d'applications web et mobiles performantes.</p>
+                </div>
+                <div class="skill">
+                    <i class="skill-icon fas fa-cloud"></i>
+                    <h3>Supabase</h3>
+                    <p>Gestion des bases de données et authentification en temps réel avec Supabase.</p>
+                </div>
+                <div class="skill">
+                    <i class="skill-icon fas fa-server"></i>
+                    <h3>MySQL</h3>
+                    <p>Conception et gestion de bases de données relationnelles avec MySQL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="cta-button">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Seb. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,7 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function() {
+    // Toggle menu
     $('.menu-toggle').click(function() {
         $('nav ul').toggleClass('show');
     });
+
     // Fonction pour ajuster la hauteur de l'intro
     function adjustIntroHeight() {
         var headerHeight = document.getElementById('header').offsetHeight;
@@ -15,22 +17,30 @@ $(document).ready(function(){
     // Ré-ajuster lors du redimensionnement de la fenêtre
     $(window).on('resize', adjustIntroHeight);
 });
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+
+// Gestion du formulaire de contact
+document.getElementById('contact-form')?.addEventListener('submit', function(event) {
     event.preventDefault(); // Empêche l'envoi par défaut du formulaire
-    
+
     const form = this;
     const formData = new FormData(form);
-    
-    fetch('https://cors-anywhere.herokuapp.com/https://formspree.io/f/xvgpaqkj', {
+
+    fetch('https://formspree.io/f/xvgpaqkj', {
         method: 'POST',
-        body: new FormData(form)
+        body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur de réseau');
+        }
+        return response.json();
+    })
     .then(data => {
         alert('Votre message a été envoyé !');
-        form.reset();
+        form.reset(); // Réinitialise le formulaire après l'envoi
     })
     .catch(error => {
         alert('Une erreur est survenue. Veuillez réessayer.');
+        console.error('Erreur:', error);
     });
 });

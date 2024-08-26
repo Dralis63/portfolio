@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #1A1A1D; /* Noir */
-    --secondary-color: #4E4E50; /* Gris foncé */
-    --background-color: #f4f4f4; /* Gris clair */
+    --primary-color: #007acc; /* Bleu primaire */
+    --secondary-color: #005f99; /* Bleu foncé */
+    --background-color: #f0f4f8; /* Gris clair */
     --text-color: #333; /* Texte principal */
-    --light-text-color: #666; /* Texte secondaire */
-    --accent-color: #C3073F; /* Rouge vif */
+    --light-text-color: #555; /* Texte secondaire */
+    --accent-color: #ff4081; /* Accent rose */
     --font-main: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 }
@@ -127,7 +127,7 @@ nav ul li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .intro-content {
@@ -373,11 +373,11 @@ nav ul li a {
 
 #contact-form input:focus, 
 #contact-form textarea:focus {
-    border-color: #C3073F; /* Couleur de bordure lors du focus */
+    border-color: #007acc; /* Couleur de bordure lors du focus */
 }
 
 #contact-form button {
-    background-color: #C3073F; /* Couleur du bouton */
+    background-color: #ff4081; /* Couleur du bouton */
     color: white;
     padding: 0.75rem;
     border: none;
@@ -389,7 +389,7 @@ nav ul li a {
 }
 
 #contact-form button:hover {
-    background-color: #A30030; /* Couleur du bouton au survol */
+    background-color: #e6306d; /* Couleur du bouton au survol */
 }
 
 /* Pied de page */

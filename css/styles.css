@@ -266,8 +266,8 @@ nav ul li a {
 
 .project-image img {
     width: 100%;
-    height: 500px;
-    object-fit: contain;
+    height: 400px;
+    object-fit: cover;
 }
 
 .project-details {

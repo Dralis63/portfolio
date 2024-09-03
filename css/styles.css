@@ -192,6 +192,7 @@ nav ul li a {
     padding: 4rem 1rem;
     background: url('../img/about-me.webp') no-repeat center center/cover;
     animation: fadeInUp 1s ease-in-out;
+    color: white;
 }
 
 .about-content {

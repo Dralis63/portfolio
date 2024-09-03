@@ -110,7 +110,7 @@ nav ul li a {
 .intro {
     position: relative;
     background: url('img/intro.webp') no-repeat center center/cover;
-    min-height: 100vh;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;

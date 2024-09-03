@@ -109,7 +109,7 @@ nav ul li a {
 /* Intro */
 .intro {
     position: relative;
-    background: url('img/background.jpg') no-repeat center center/cover;
+    background: url('img/intro.webp') no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -190,7 +190,7 @@ nav ul li a {
 /* À Propos */
 #about {
     padding: 4rem 1rem;
-    background-color: var(--background-color);
+    background: url('img/about-me.webp') no-repeat center center/cover;
     animation: fadeInUp 1s ease-in-out;
 }
 

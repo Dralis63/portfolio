@@ -59,6 +59,7 @@
 
         .nav-link {
             position: relative;
+            padding: 0.5rem 0;
         }
 
         .nav-link::after {
@@ -128,24 +129,91 @@
         .floating {
             animation: float 6s ease-in-out infinite;
         }
+
+        /* Styles pour le responsive */
         .navbar-toggler {
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 0.5rem 0.75rem;
-}
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 0.5rem 0.75rem;
+        }
 
-/* Couleur de l'icône hamburger */
-.navbar-toggler .fa-bars {
-    color: white;
-    font-size: 1.5rem;
-}
+        .navbar-toggler .fa-bars {
+            color: white;
+            font-size: 1.5rem;
+        }
 
-/* Couleur de fond du menu déplié */
-.navbar-collapse {
-    background-color: var(--dark);
-    padding: 1rem;
-    margin-top: 0.5rem;
-    border-radius: 0.5rem;
-}
+        .navbar-collapse {
+            background-color: var(--dark);
+            padding: 1rem;
+            margin-top: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Ajustements pour mobile */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                gap: 0.5rem !important;
+            }
+            
+            .navbar-nav .btn {
+                margin-top: 0.5rem;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            #hero {
+                height: auto;
+                padding-top: 100px;
+                padding-bottom: 80px;
+            }
+            
+            .display-3 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem !important;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+            }
+            
+            #about, #services, #projects, #contact {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            
+            .contact-info {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .display-3 {
+                font-size: 2rem;
+            }
+            
+            .display-4 {
+                font-size: 2rem;
+            }
+            
+            .lead {
+                font-size: 1rem;
+            }
+            
+            .project-filter {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .project-filter .btn {
+                margin-bottom: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -153,7 +221,7 @@
     <nav class="navbar navbar-expand-lg fixed-top py-3 bg-dark bg-opacity-75">
         <div class="container">
             <a class="navbar-brand fs-3 fw-bold text-gradient" href="#">CodeRush</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars text-white"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -173,15 +241,15 @@
         <div class="blur-circle" style="top:-100px;left:-100px"></div>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-lg-1 order-2">
                     <h1 class="display-3 fw-bold mb-4">Je transforme vos idées en <span class="text-gradient">solutions digitales</span></h1>
                     <p class="lead mb-4 text-white-50">Développeur Full-Stack Freelance spécialisé dans la création d'applications web performantes et sur mesure.</p>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 hero-buttons">
                         <a href="#contact" class="btn btn-gradient btn-lg rounded-pill px-4">Discutons de votre projet</a>
                         <a href="#projects" class="btn btn-outline-light btn-lg rounded-pill px-4">Voir mes réalisations</a>
                     </div>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block">
+                <div class="col-lg-6 d-lg-block d-none order-lg-2 order-1 mb-lg-0 mb-5">
                     <img src="https://assets-global.website-files.com/5f15530648874c5f977e91c1/62a09b5b7d8a5d3a5c1c1f1f_web-developer-working.gif" 
                          alt="Développeur web" class="img-fluid floating">
                 </div>
@@ -318,7 +386,7 @@
                 <p class="lead text-white-50">Découvrez une sélection de projets récents que j'ai développés pour mes clients.</p>
             </div>
             
-            <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+            <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap project-filter">
                 <button class="btn btn-outline-light rounded-pill active">Tous</button>
                 <button class="btn btn-outline-light rounded-pill">Web</button>
                 <button class="btn btn-outline-light rounded-pill">Mobile</button>
@@ -402,7 +470,7 @@
             
             <div class="row g-5">
                 <div class="col-lg-5">
-                    <div class="bg-glass rounded-4 p-4 p-lg-5 h-100">
+                    <div class="bg-glass rounded-4 p-4 p-lg-5 h-100 contact-info">
                         <div class="d-flex gap-4 mb-4">
                             <div class="icon-box bg-primary bg-gradient rounded-3 p-3" style="width: 50px; height: 50px">
                                 <i class="fas fa-map-marker-alt text-white"></i>

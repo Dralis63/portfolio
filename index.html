@@ -136,20 +136,10 @@
             padding: 0.5rem 0.75rem;
         }
 
-        .navbar-toggler {
-    border: 1px solid rgba(255,255,255,0.3) !important;
-    padding: 0.5rem 0.75rem !important;
-    background-color: transparent !important;
-}
-
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25) !important;
-    outline: none !important;
-}
-
-.navbar-toggler-icon-custom {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
+        .navbar-toggler .fa-bars {
+            color: white;
+            font-size: 1.5rem;
+        }
 
         .navbar-collapse {
             background-color: var(--dark);
@@ -170,12 +160,6 @@
                 width: 100%;
                 text-align: center;
             }
-            .navbar-collapse {
-        background-color: var(--dark) !important;
-        padding: 1rem !important;
-        margin-top: 0.5rem !important;
-        border-radius: 0.5rem !important;
-    }
         }
 
         @media (max-width: 767.98px) {
@@ -238,7 +222,7 @@
         <div class="container">
             <a class="navbar-brand fs-3 fw-bold text-gradient" href="#">CodeRush</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon-custom"></span>
+                <i class="fas fa-bars text-white"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto gap-lg-4">

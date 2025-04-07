@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="MzzdvnJms9jfhmBtzHGOG1rC6vG__gvndeYAR5hFXu0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CodeRush | Développeur Full-Stack Freelance</title>
+    <title>CodeRush | Développeur Full-Stack Freelance - Création de Sites Web & Applications</title>
+    <meta name="description" content="Développeur Full-Stack Freelance spécialisé dans la création de sites web, applications mobiles et solutions e-commerce. Expertise en React, Node.js, Flutter et WordPress.">
+    <meta name="keywords" content="développeur, développeur web, développeur application, création site web, ecommerce, code, rush, code-rush, freelance, react, nodejs, flutter, wordpress">
+    <meta name="author" content="CodeRush">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CodeRush | Développeur Full-Stack Freelance">
+    <meta property="og:description" content="Développeur Full-Stack spécialisé dans la création de sites web et applications sur mesure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.coderush.fr">
+    <meta property="og:image" content="https://www.coderush.fr/images/og-image.jpg">
+    <link rel="canonical" href="https://www.coderush.fr">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "CodeRush",
+      "jobTitle": "Développeur Full-Stack Freelance",
+      "url": "https://www.coderush.fr",
+      "sameAs": [
+        "https://www.linkedin.com/in/coderush",
+        "https://github.com/coderush",
+        "https://www.malt.fr/profile/coderush"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "email": "mailto:coderush63@gmail.com",
+      "telephone": "+33-6-83-98-23-84",
+      "image": "https://www.coderush.fr/images/profile.jpg",
+      "description": "Développeur Full-Stack Freelance spécialisé dans la création de sites web, applications mobiles et solutions e-commerce."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -27,6 +69,7 @@
 
         html {
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -36,20 +79,42 @@
             overflow-x: hidden;
             width: 100%;
             position: relative;
-            padding-top: 70px; /* Compensation pour la navbar fixe */
+            padding-top: 70px;
+            line-height: 1.6;
         }
 
         h1, h2, h3, .display-1, .display-2, .display-3 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
+            line-height: 1.3;
         }
 
-        /* NAVBAR CORRECTED */
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        /* NAVBAR */
         .navbar {
             transition: all 0.3s ease;
             z-index: 1030;
             padding: 0.75rem 1rem;
             width: 100%;
+            background-color: rgba(26, 26, 46, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
 
         .navbar-brand {
@@ -57,7 +122,6 @@
             white-space: nowrap;
         }
 
-        /* Bouton toggler optimisé */
         .navbar-toggler {
             border: 1px solid rgba(255,255,255,0.3) !important;
             padding: 0.5rem !important;
@@ -70,7 +134,6 @@
             height: 1.25em;
         }
 
-        /* Menu déroulant mobile */
         .navbar-collapse {
             background-color: var(--dark);
             padding: 1rem;
@@ -79,19 +142,15 @@
             z-index: 1020;
         }
 
-        @media (max-width: 991.98px) {
-            .navbar-nav {
-                gap: 0.5rem !important;
-            }
-            
-            .navbar-nav .btn {
-                margin-top: 0.5rem;
-                width: 100%;
-                text-align: center;
+        @media (min-width: 992px) {
+            .navbar-collapse {
+                background-color: transparent;
+                padding: 0;
+                margin-top: 0;
             }
         }
 
-        /* Conteneurs responsive */
+        /* Conteneurs */
         .container, .container-fluid {
             padding-left: 15px;
             padding-right: 15px;
@@ -104,12 +163,7 @@
             width: 100%;
             overflow: hidden;
             position: relative;
-        }
-
-        #hero {
-            min-height: 100vh;
-            height: auto;
-            padding: 100px 0;
+            padding: 5rem 0;
         }
 
         /* Styles communs */
@@ -117,6 +171,12 @@
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .bg-glass:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
         }
 
         .text-gradient {
@@ -131,11 +191,13 @@
             border: none;
             color: white;
             transition: all 0.4s ease;
+            font-weight: 600;
         }
 
         .btn-gradient:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+            color: white;
         }
 
         .nav-link {
@@ -168,19 +230,155 @@
             z-index: -1;
         }
 
-        /* Ajustements mobile */
+        /* Hero section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* About section */
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+            transition: width 1.5s ease;
+        }
+
+        /* Services */
+        .service-card {
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Projects */
+        .project-card {
+            transition: all 0.4s ease;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            height: 100%;
+        }
+
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.6s ease;
+            width: 100%;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.05);
+        }
+
+        .project-tag {
+            background-color: rgba(108, 99, 255, 0.2);
+            color: var(--light);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Contact form */
+        .form-control {
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255,255,255,0.1);
+            border-color: var(--primary);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d0d15;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                gap: 0.5rem !important;
+            }
+            
+            .navbar-nav .btn {
+                margin-top: 0.5rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            section {
+                padding: 3rem 0 !important;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
         @media (max-width: 767.98px) {
             .display-3 {
                 font-size: 2.2rem !important;
-                line-height: 1.2;
             }
             
             .display-4 {
                 font-size: 2rem !important;
-            }
-            
-            .lead {
-                font-size: 1rem !important;
             }
             
             .hero-buttons {
@@ -190,21 +388,6 @@
             
             .hero-buttons .btn {
                 width: 100%;
-            }
-            
-            section {
-                padding: 3rem 0 !important;
-            }
-            
-            .project-filter {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .project-filter .btn {
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-                padding: 0.375rem 0.75rem;
             }
         }
 
@@ -216,64 +399,14 @@
             .navbar-brand {
                 font-size: 1.5rem;
             }
-            
-            .btn-lg {
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-            }
-        }
-
-        /* Correction des débordements horizontaux */
-        .row {
-            margin-left: -7.5px;
-            margin-right: -7.5px;
-        }
-        
-        .row > * {
-            padding-left: 7.5px;
-            padding-right: 7.5px;
-        }
-
-        /* Images responsive */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Projets */
-        .project-card {
-            transition: all 0.4s ease;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-img {
-            height: 200px;
-            object-fit: cover;
-            transition: all 0.6s ease;
-            width: 100%;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Contact form */
-        .form-control {
-            width: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar corrigée -->
-    <nav class="navbar navbar-expand-lg fixed-top py-2 bg-dark bg-opacity-75">
-        <div class="container-fluid">
-            <a class="navbar-brand fs-3 fw-bold text-gradient" href="#">CodeRush</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top py-2">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold text-gradient" href="#" aria-label="CodeRush - Développeur Full-Stack">CodeRush</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -289,181 +422,204 @@
         </div>
     </nav>
 
-    <!-- Hero section optimisée -->
-    <section id="hero" class="d-flex align-items-center position-relative py-5">
+    <!-- Hero section -->
+    <section id="hero" class="position-relative">
         <div class="blur-circle" style="top:-100px;left:-100px"></div>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-1 order-2">
-                    <h1 class="display-3 fw-bold mb-4">Je transforme vos idées en <span class="text-gradient">solutions digitales</span></h1>
-                    <p class="lead mb-4 text-white-50">Développeur Full-Stack Freelance spécialisé dans la création d'applications web performantes et sur mesure.</p>
-                    <div class="d-flex gap-3 flex-wrap hero-buttons">
+                <div class="col-lg-6 order-lg-1 order-2 hero-content">
+                    <h1 class="display-3 fw-bold mb-4 fade-in">Je transforme vos idées en <span class="text-gradient">solutions digitales</span></h1>
+                    <p class="lead mb-4 text-white-50 fade-in" style="transition-delay: 0.2s">Développeur Full-Stack Freelance spécialisé dans la création d'applications web performantes et sur mesure. Expertise en développement frontend, backend et solutions e-commerce.</p>
+                    <div class="d-flex gap-3 flex-wrap hero-buttons fade-in" style="transition-delay: 0.4s">
                         <a href="#contact" class="btn btn-gradient btn-lg rounded-pill px-4 flex-grow-1">Discutons de votre projet</a>
                         <a href="#projects" class="btn btn-outline-light btn-lg rounded-pill px-4 flex-grow-1">Voir mes réalisations</a>
                     </div>
                 </div>
-                <div class="col-lg-6 d-lg-block d-none order-lg-2 order-1 mb-lg-0 mb-4 text-center">
+                <div class="col-lg-6 d-lg-block d-none order-lg-2 order-1 mb-lg-0 mb-4 text-center fade-in" style="transition-delay: 0.6s">
                     <img src="https://media.giphy.com/media/ZgTR3UQ9XAWDvqy9jv/giphy.gif" 
-                         alt="Développeur web" class="img-fluid floating d-inline-block">
+                         alt="Développeur web travaillant sur un projet" class="img-fluid floating d-inline-block" width="500" height="500">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About section -->
-    <section id="about" class="py-5 bg-dark bg-gradient">
-        <div class="container py-4">
+    <section id="about" class="bg-dark bg-gradient">
+        <div class="container">
             <div class="row align-items-center g-4 g-lg-5">
                 <div class="col-lg-6">
                     <div class="position-relative">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Développeur CodeRush" class="img-fluid rounded-3 shadow w-100">
+                             alt="CodeRush développeur full-stack au travail" class="img-fluid rounded-3 shadow w-100" width="600" height="400" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <h2 class="display-4 fw-bold mb-4 text-gradient">Mon Expertise</h2>
-                    <p class="lead text-white-50 mb-4">Développeur Full-Stack spécialisé dans des solutions sur mesure</p>
+                    <p class="lead text-white-50 mb-4">Développeur Full-Stack avec 5 ans d'expérience dans la création de solutions sur mesure</p>
                     
-                    <!-- Stack Technique Complète -->
+                    <!-- Stack Technique -->
                     <div class="mb-4">
-                        <h5 class="text-white mb-3">Technologies Maîtrisées</h5>
+                        <h3 class="h5 text-white mb-3">Technologies Maîtrisées</h3>
                         <div class="d-flex flex-wrap gap-2 mb-3">
-                            <!-- Mobile & Front -->
-                            <span class="badge bg-primary text-white p-2">Flutter</span>
                             <span class="badge bg-primary text-white p-2">React</span>
-                            <span class="badge bg-primary text-white p-2">JavaScript</span>
-                            
-                            <!-- Backend -->
                             <span class="badge bg-primary text-white p-2">Node.js</span>
-                            <span class="badge bg-primary text-white p-2">PHP</span>
-                            
-                            <!-- CMS & E-commerce -->
+                            <span class="badge bg-primary text-white p-2">JavaScript</span>
+                            <span class="badge bg-primary text-white p-2">TypeScript</span>
+                            <span class="badge bg-primary text-white p-2">Flutter</span>
                             <span class="badge bg-success text-white p-2">WordPress</span>
                             <span class="badge bg-success text-white p-2">WooCommerce</span>
-                            
-                            <!-- Bases de données -->
                             <span class="badge bg-info text-dark p-2">MongoDB</span>
                             <span class="badge bg-info text-dark p-2">MySQL</span>
+                            <span class="badge bg-warning text-dark p-2">Docker</span>
                         </div>
-                        <p class="text-white-50 small">Technologies principales utilisées dans mes projets</p>
+                        <p class="text-white-50 small">Technologies principales utilisées dans mes projets de développement web et mobile</p>
                     </div>
                     
-                    <!-- Expérience Détailée -->
+                    <!-- Expérience -->
                     <div class="mb-4">
-                        <h5 class="text-white mb-3">Domaines d'Intervention</h5>
+                        <h3 class="h5 text-white mb-3">Domaines d'Intervention</h3>
                         <ul class="text-white-50">
-                            <!-- Développement d'apps -->
+                            <li class="mb-2 d-flex align-items-start">
+                                <i class="fas fa-laptop-code text-primary mt-1 me-2"></i>
+                                <span>
+                                    <strong>Développement d'applications web</strong> sur mesure<br>
+                                    <small class="text-white-60">Single Page Applications, dashboards admin</small>
+                                </span>
+                            </li>
+                            
                             <li class="mb-2 d-flex align-items-start">
                                 <i class="fas fa-mobile-alt text-primary mt-1 me-2"></i>
                                 <span>
-                                    <strong>Applications cross-platform</strong> avec Flutter<br>
-                                    <small class="text-white-60">Développement mobile iOS/Android</small>
+                                    <strong>Applications mobiles cross-platform</strong><br>
+                                    <small class="text-white-60">iOS et Android avec Flutter et React Native</small>
                                 </span>
                             </li>
                             
-                            <!-- Solutions e-commerce -->
                             <li class="mb-2 d-flex align-items-start">
                                 <i class="fas fa-shopping-cart text-success mt-1 me-2"></i>
                                 <span>
-                                    <strong>Boutiques en ligne</strong> (WooCommerce/Shopify)<br>
-                                    <small class="text-white-60">Paiements sécurisés, gestion de stocks</small>
+                                    <strong>Boutiques en ligne</strong> et solutions e-commerce<br>
+                                    <small class="text-white-60">WooCommerce, Shopify, solutions custom</small>
                                 </span>
                             </li>
                             
-                            <!-- CMS WordPress -->
-                            <li class="mb-2 d-flex align-items-start">
+                            <li class="d-flex align-items-start">
                                 <i class="fab fa-wordpress text-info mt-1 me-2"></i>
                                 <span>
-                                    <strong>Sites WordPress</strong> sur mesure<br>
-                                    <small class="text-white-60">Thèmes personnalisés, extensions PHP</small>
-                                </span>
-                            </li>
-                            
-                            <!-- Fullstack -->
-                            <li class="d-flex align-items-start">
-                                <i class="fas fa-code text-warning mt-1 me-2"></i>
-                                <span>
-                                    <strong>Applications web complètes</strong> (MERN Stack)<br>
-                                    <small class="text-white-60">React + Node.js + MongoDB</small>
+                                    <strong>Sites WordPress performants</strong><br>
+                                    <small class="text-white-60">Thèmes personnalisés, plugins sur mesure</small>
                                 </span>
                             </li>
                         </ul>
                     </div>
-                    
-                    <!-- Niveaux de Maîtrise (Optionnel) -->
-                    
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services section -->
-    <section id="services" class="py-5 position-relative">
+    <section id="services" class="position-relative">
         <div class="blur-circle" style="top:50px;right:-100px"></div>
-        <div class="container py-4">
+        <div class="container">
             <div class="text-center mb-5">
                 <h2 class="display-4 fw-bold mb-3 text-gradient">Mes Services</h2>
-                <p class="lead text-white-50">Je propose une gamme complète de services pour répondre à tous vos besoins digitaux.</p>
+                <p class="lead text-white-50">Une gamme complète de services pour répondre à tous vos besoins en développement web et mobile</p>
             </div>
             
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="bg-glass rounded-4 p-4 h-100">
-                        <div class="icon-box bg-primary bg-gradient rounded-3 p-3 mb-4" style="width: 60px; height: 60px">
-                            <i class="fas fa-code text-white fs-4"></i>
+                    <div class="service-card bg-glass rounded-4 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
                         </div>
                         <h3 class="h4 mb-3">Développement Frontend</h3>
-                        <p class="text-white-50">Création d'interfaces utilisateur réactives et modernes avec les dernières technologies.</p>
+                        <p class="text-white-50">Création d'interfaces utilisateur réactives et modernes avec React, Vue.js ou Angular. Optimisation des performances et expérience utilisateur.</p>
+                        <ul class="text-white-50 small">
+                            <li>Single Page Applications</li>
+                            <li>Responsive design mobile-first</li>
+                            <li>Animations fluides</li>
+                            <li>Optimisation SEO technique</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="bg-glass rounded-4 p-4 h-100">
-                        <div class="icon-box bg-primary bg-gradient rounded-3 p-3 mb-4" style="width: 60px; height: 60px">
-                            <i class="fas fa-server text-white fs-4"></i>
+                    <div class="service-card bg-glass rounded-4 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
                         </div>
                         <h3 class="h4 mb-3">Développement Backend</h3>
-                        <p class="text-white-50">Construction d'API robustes et sécurisées avec Node.js, Express ou Laravel.</p>
+                        <p class="text-white-50">Construction d'API robustes et sécurisées avec Node.js, Express ou Laravel. Architecture microservices et bases de données.</p>
+                        <ul class="text-white-50 small">
+                            <li>API REST/GraphQL</li>
+                            <li>Authentification sécurisée</li>
+                            <li>Bases de données SQL/NoSQL</li>
+                            <li>Tests unitaires et d'intégration</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="bg-glass rounded-4 p-4 h-100">
-                        <div class="icon-box bg-primary bg-gradient rounded-3 p-3 mb-4" style="width: 60px; height: 60px">
-                            <i class="fas fa-mobile-alt text-white fs-4"></i>
+                    <div class="service-card bg-glass rounded-4 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3 class="h4 mb-3">Applications Hybrides</h3>
-                        <p class="text-white-50">Développement d'applications mobiles cross-platform avec React Native.</p>
+                        <h3 class="h4 mb-3">Applications Mobiles</h3>
+                        <p class="text-white-50">Développement d'applications iOS et Android cross-platform avec Flutter et React Native. Publication sur les stores.</p>
+                        <ul class="text-white-50 small">
+                            <li>Applications natives performantes</li>
+                            <li>Intégration d'APIs</li>
+                            <li>Notifications push</li>
+                            <li>Publication sur App Store/Play Store</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="bg-glass rounded-4 p-4 h-100">
-                        <div class="icon-box bg-primary bg-gradient rounded-3 p-3 mb-4" style="width: 60px; height: 60px">
-                            <i class="fas fa-database text-white fs-4"></i>
+                    <div class="service-card bg-glass rounded-4 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <h3 class="h4 mb-3">Bases de Données</h3>
-                        <p class="text-white-50">Conception et optimisation de bases de données SQL et NoSQL.</p>
+                        <h3 class="h4 mb-3">E-commerce</h3>
+                        <p class="text-white-50">Solutions e-commerce clés en main avec WooCommerce, Shopify ou développements sur mesure. Paiements sécurisés et gestion de stocks.</p>
+                        <ul class="text-white-50 small">
+                            <li>Boutiques en ligne performantes</li>
+                            <li>Intégration de moyens de paiement</li>
+                            <li>Gestion des stocks et commandes</li>
+                            <li>Optimisation pour le SEO</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="bg-glass rounded-4 p-4 h-100">
-                        <div class="icon-box bg-primary bg-gradient rounded-3 p-3 mb-4" style="width: 60px; height: 60px">
-                            <i class="fas fa-cloud text-white fs-4"></i>
+                    <div class="service-card bg-glass rounded-4 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fab fa-wordpress"></i>
                         </div>
-                        <h3 class="h4 mb-3">Hébergement Cloud</h3>
-                        <p class="text-white-50">Configuration et déploiement sur AWS, Google Cloud ou Azure.</p>
+                        <h3 class="h4 mb-3">WordPress</h3>
+                        <p class="text-white-50">Sites WordPress sur mesure avec thèmes personnalisés et extensions développées spécifiquement pour vos besoins.</p>
+                        <ul class="text-white-50 small">
+                            <li>Thèmes custom performants</li>
+                            <li>Plugins sur mesure</li>
+                            <li>Optimisation des performances</li>
+                            <li>Sécurité renforcée</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="bg-glass rounded-4 p-4 h-100">
-                        <div class="icon-box bg-primary bg-gradient rounded-3 p-3 mb-4" style="width: 60px; height: 60px">
-                            <i class="fas fa-search text-white fs-4"></i>
+                    <div class="service-card bg-glass rounded-4 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
                         </div>
-                        <h3 class="h4 mb-3">SEO Technique</h3>
-                        <p class="text-white-50">Optimisation des performances et du référencement.</p>
+                        <h3 class="h4 mb-3">SEO & Performance</h3>
+                        <p class="text-white-50">Optimisation technique pour le référencement naturel (SEO) et amélioration des performances de chargement.</p>
+                        <ul class="text-white-50 small">
+                            <li>Audit technique SEO</li>
+                            <li>Optimisation des temps de chargement</li>
+                            <li>Structured Data et rich snippets</li>
+                            <li>SEO local et international</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -471,55 +627,54 @@
     </section>
 
     <!-- Projects section -->
-    <section id="projects" class="py-5 bg-dark bg-gradient">
-        <div class="container py-4">
+    <section id="projects" class="bg-dark bg-gradient">
+        <div class="container">
             <div class="text-center mb-5">
                 <h2 class="display-4 fw-bold mb-3 text-gradient">Mes Réalisations</h2>
-                <p class="lead text-white-50">Découvrez une sélection de projets récents que j'ai développés pour mes clients.</p>
+                <p class="lead text-white-50">Découvrez une sélection de projets récents que j'ai développés pour mes clients</p>
             </div>
             
             <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
-                <button class="btn btn-outline-light rounded-pill active">Tous</button>
-                <button class="btn btn-outline-light rounded-pill">Web</button>
-                <button class="btn btn-outline-light rounded-pill">Mobile</button>
-                <button class="btn btn-outline-light rounded-pill">E-commerce</button>
+                <button class="btn btn-outline-light rounded-pill active" data-filter="all">Tous</button>
+                <button class="btn btn-outline-light rounded-pill" data-filter="web">Web</button>
+                <button class="btn btn-outline-light rounded-pill" data-filter="mobile">Mobile</button>
+                <button class="btn btn-outline-light rounded-pill" data-filter="ecommerce">E-commerce</button>
             </div>
             
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
+            <div class="row g-4" id="projects-container">
+                <div class="col-12 col-md-6 col-lg-4 project-item" data-category="mobile">
                     <div class="project-card bg-glass rounded-4 overflow-hidden h-100">
                         <div class="overflow-hidden" style="height: 200px">
                             <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="GeoProtect - Sécurité enfants" class="project-img w-100 h-100">
+                                 alt="GeoProtect - Application de sécurité pour enfants" class="project-img w-100 h-100" width="400" height="200" loading="lazy">
                         </div>
                         <div class="p-4 position-relative">
                             <a href="#" class="btn btn-primary rounded-circle position-absolute" style="top: -20px; right: 20px; width: 40px; height: 40px">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                             <h3 class="h4 mb-2">GeoProtect</h3>
-                            <p class="text-white-50 mb-3">Application de géolocalisation et de sécurité pour enfants avec alerte parentale en temps réel.</p>
+                            <p class="text-white-50 mb-3">Application mobile de géolocalisation et de sécurité pour enfants avec alerte parentale en temps réel.</p>
                             <div class="d-flex gap-2 flex-wrap">
                                 <span class="project-tag rounded-pill px-2 py-1 small">Flutter</span>
                                 <span class="project-tag rounded-pill px-2 py-1 small">Firebase</span>
                                 <span class="project-tag rounded-pill px-2 py-1 small">Geolocation</span>
-                                <span class="project-tag rounded-pill px-2 py-1 small">Streaming audio</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 project-item" data-category="web">
                     <div class="project-card bg-glass rounded-4 overflow-hidden h-100">
                         <div class="overflow-hidden" style="height: 200px">
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Application SaaS" class="project-img w-100 h-100">
+                                 alt="Application SaaS de gestion de projet" class="project-img w-100 h-100" width="400" height="200" loading="lazy">
                         </div>
                         <div class="p-4 position-relative">
                             <a href="#" class="btn btn-primary rounded-circle position-absolute" style="top: -20px; right: 20px; width: 40px; height: 40px">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
-                            <h3 class="h4 mb-2">Application SaaS</h3>
-                            <p class="text-white-50 mb-3">Plateforme de gestion de projet avec tableau de bord analytique.</p>
+                            <h3 class="h4 mb-2">TaskFlow SaaS</h3>
+                            <p class="text-white-50 mb-3">Plateforme de gestion de projet avec tableau de bord analytique et gestion des tâches en équipe.</p>
                             <div class="d-flex gap-2 flex-wrap">
                                 <span class="project-tag rounded-pill px-2 py-1 small">React</span>
                                 <span class="project-tag rounded-pill px-2 py-1 small">Node.js</span>
@@ -529,18 +684,60 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 project-item" data-category="ecommerce">
                     <div class="project-card bg-glass rounded-4 overflow-hidden h-100">
                         <div class="overflow-hidden" style="height: 200px">
                             <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Boutique en ligne" class="project-img w-100 h-100">
+                                 alt="Boutique en ligne de vêtements" class="project-img w-100 h-100" width="400" height="200" loading="lazy">
                         </div>
                         <div class="p-4 position-relative">
                             <a href="#" class="btn btn-primary rounded-circle position-absolute" style="top: -20px; right: 20px; width: 40px; height: 40px">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
-                            <h3 class="h4 mb-2">Boutique en ligne</h3>
-                            <p class="text-white-50 mb-3">Site e-commerce avec système de paiement sécurisé.</p>
+                            <h3 class="h4 mb-2">FashionHub</h3>
+                            <p class="text-white-50 mb-3">Boutique en ligne de vêtements avec système de paiement sécurisé et gestion des stocks.</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="project-tag rounded-pill px-2 py-1 small">WooCommerce</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">WordPress</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 project-item" data-category="mobile">
+                    <div class="project-card bg-glass rounded-4 overflow-hidden h-100">
+                        <div class="overflow-hidden" style="height: 200px">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Application mobile de fitness" class="project-img w-100 h-100" width="400" height="200" loading="lazy">
+                        </div>
+                        <div class="p-4 position-relative">
+                            <a href="#" class="btn btn-primary rounded-circle position-absolute" style="top: -20px; right: 20px; width: 40px; height: 40px">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <h3 class="h4 mb-2">FitTrack Pro</h3>
+                            <p class="text-white-50 mb-3">Application mobile de suivi d'activité sportive avec plans d'entraînement personnalisés.</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="project-tag rounded-pill px-2 py-1 small">React Native</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">Firebase</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">HealthKit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="project-card bg-glass rounded-4 overflow-hidden h-100">
+                        <div class="overflow-hidden" style="height: 200px">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                 alt="Plateforme de réservation en ligne" class="project-img w-100 h-100" width="400" height="200" loading="lazy">
+                        </div>
+                        <div class="p-4 position-relative">
+                            <a href="#" class="btn btn-primary rounded-circle position-absolute" style="top: -20px; right: 20px; width: 40px; height: 40px">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <h3 class="h4 mb-2">BookEasy</h3>
+                            <p class="text-white-50 mb-3">Plateforme de réservation en ligne pour professionnels avec gestion de calendrier.</p>
                             <div class="d-flex gap-2 flex-wrap">
                                 <span class="project-tag rounded-pill px-2 py-1 small">Vue.js</span>
                                 <span class="project-tag rounded-pill px-2 py-1 small">Laravel</span>
@@ -550,21 +747,23 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 project-item" data-category="ecommerce">
                     <div class="project-card bg-glass rounded-4 overflow-hidden h-100">
                         <div class="overflow-hidden" style="height: 200px">
-                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Application mobile" class="project-img w-100 h-100">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Boutique en ligne de produits artisanaux" class="project-img w-100 h-100" width="400" height="200" loading="lazy">
                         </div>
                         <div class="p-4 position-relative">
                             <a href="#" class="btn btn-primary rounded-circle position-absolute" style="top: -20px; right: 20px; width: 40px; height: 40px">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
-                            <h3 class="h4 mb-2">App Fitness</h3>
-                            <p class="text-white-50 mb-3">Application mobile de suivi d'activité sportive.</p>
+                            <h3 class="h4 mb-2">ArtisanMarket</h3>
+                            <p class="text-white-50 mb-3">Marketplace pour artisans avec système de commissions et paiements sécurisés.</p>
                             <div class="d-flex gap-2 flex-wrap">
-                                <span class="project-tag rounded-pill px-2 py-1 small">React Native</span>
-                                <span class="project-tag rounded-pill px-2 py-1 small">Firebase</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">React</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">Node.js</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">MongoDB</span>
+                                <span class="project-tag rounded-pill px-2 py-1 small">Stripe</span>
                             </div>
                         </div>
                     </div>
@@ -574,9 +773,9 @@
     </section>
 
     <!-- Contact section -->
-    <section id="contact" class="py-5 position-relative">
+    <section id="contact" class="position-relative">
         <div class="blur-circle" style="bottom:-100px;left:-100px;background:radial-gradient(circle, rgba(255, 101, 132, 0.4) 0%, rgba(255, 101, 132, 0) 70%)"></div>
-        <div class="container py-4">
+        <div class="container">
             <div class="text-center mb-5">
                 <h2 class="display-4 fw-bold mb-3 text-gradient">Contactez-moi</h2>
                 <p class="lead text-white-50">Prêt à démarrer votre projet? Discutons-en dès maintenant!</p>
@@ -616,16 +815,16 @@
                         </div>
                         
                         <div class="d-flex gap-2 mt-4 justify-content-center justify-content-lg-start">
-                            <a href="#" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <a href="https://github.com/coderush" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Profil GitHub de CodeRush">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <a href="https://www.linkedin.com/in/coderush" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Profil LinkedIn de CodeRush">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <a href="https://www.malt.fr/profile/coderush" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Profil Malt de CodeRush">
                                 <i class="fab fa-malt"></i>
                             </a>
-                            <a href="#" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <a href="https://twitter.com/coderush" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Profil Twitter de CodeRush">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </div>
@@ -634,7 +833,7 @@
                 
                 <div class="col-lg-7">
                     <div class="bg-glass rounded-4 p-4 p-lg-5">
-                        <form action="https://formspree.io/f/mjkbwowg" method="POST">
+                        <form action="https://formspree.io/f/mjkbwowg" method="POST" id="contact-form">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Votre nom</label>
                                 <input type="text" name="name" class="form-control bg-transparent text-white border-white-50" id="name" required>
@@ -664,11 +863,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-black">
+    <footer class="py-5">
         <div class="container py-4">
             <div class="text-center">
-                <a href="#" class="d-inline-block mb-3 text-gradient text-decoration-none fs-2 fw-bold">CodeRush</a>
-                <p class="text-white-50 mb-4">Développeur Full-Stack Freelance spécialisé dans la création de solutions web performantes et sur mesure.</p>
+                <a href="#" class="d-inline-block mb-3 text-gradient text-decoration-none fs-2 fw-bold" aria-label="CodeRush - Développeur Full-Stack">CodeRush</a>
+                <p class="text-white-50 mb-4">Développeur Full-Stack Freelance spécialisé dans la création de solutions web et mobiles performantes et sur mesure.</p>
                 
                 <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
                     <a href="#hero" class="text-white text-decoration-none">Accueil</a>
@@ -678,7 +877,7 @@
                     <a href="#contact" class="text-white text-decoration-none">Contact</a>
                 </div>
                 
-                <p class="text-white-50 small mb-0">&copy; 2025 CodeRush. Tous droits réservés.</p>
+                <p class="text-white-50 small mb-0">&copy; <span id="current-year">2025</span> CodeRush. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -686,44 +885,64 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Animation des compétences
         document.addEventListener('DOMContentLoaded', function() {
-            const skillBars = document.querySelectorAll('.skill-progress');
+            // Gestion de la navbar scroll
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Filtrage des projets
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const projectItems = document.querySelectorAll('.project-item');
             
-            // Fonction pour animer les barres de compétences
-            function animateSkills() {
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Mise à jour des boutons actifs
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filtrage des projets
+                    projectItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
                 });
-            }
+            });
+
+            // Animation au scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
             
-            // Observer pour déclencher l'animation
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting && entry.target.id === 'about') {
-                        animateSkills();
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
                     }
                 });
             }, { threshold: 0.1 });
             
-            // Observer la section about
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                observer.observe(aboutSection);
-            }
-            
-            // Filtrage des projets (exemple simplifié)
-            const filterButtons = document.querySelectorAll('#projects .btn-outline-light');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Mise à jour de l'année dans le footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Gestion du formulaire de contact
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // Ici vous pouvez ajouter la logique de soumission du formulaire
+                    // Par exemple avec fetch() pour une soumission AJAX
                 });
-            });
+            }
 
             // Correction du débordement horizontal
             function checkOverflow() {

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /includes/
+
+Sitemap: https://www.coderush.fr/sitemap.xml

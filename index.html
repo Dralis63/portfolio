@@ -669,6 +669,33 @@
             background: linear-gradient(135deg, #161032 0%, #3b1f5e 55%, #7a3db8 130%);
         }
 
+        /* Visuel photo (capture du site) */
+        .visual-photo {
+            position: relative;
+            min-height: 280px;
+        }
+
+        .visual-photo .visual-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .visual-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 10, 18, 0) 40%, rgba(10, 10, 18, 0.85) 100%);
+        }
+
+        .visual-photo .visual-caption {
+            position: relative;
+            z-index: 1;
+        }
+
         .featured-glyph {
             position: absolute;
             top: -25px;
@@ -1251,16 +1278,16 @@
                     <article class="featured-card glass lift">
                         <div class="row g-0 h-100">
                             <div class="col-lg-6">
-                                <div class="featured-visual visual-khaldrun h-100">
-                                    <i class="fas fa-dragon featured-glyph" aria-hidden="true"></i>
-                                    <div>
-                                        <h3>KHALDRUN</h3>
-                                        <p class="featured-sub mb-0">Jeu de stratégie médiéval-fantastique en navigateur</p>
+                                <div class="featured-visual visual-photo h-100">
+                                    <img src="img/khaldrun.jpg" alt="Le jeu Khaldrun dans le navigateur : page d'accueil avec les quatre peuples" class="visual-img" loading="lazy">
+                                    <div class="visual-caption">
+                                        <p class="featured-sub mb-0">Capture du jeu — khaldrun.ct.ws</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="featured-body h-100 d-flex flex-column justify-content-center">
+                                    <h3 class="visually-hidden">Khaldrun — jeu de stratégie médiéval-fantastique en navigateur</h3>
                                     <span class="status-pill status-live align-self-start mb-3"><span class="pulse-dot" aria-hidden="true"></span>Saison 1 en ligne</span>
                                     <p>
                                         Un monde fissuré, trois peuples, des veines d'Éther à conquérir. Bâtissez votre royaume

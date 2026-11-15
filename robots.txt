@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /includes/
+Disallow: /divers/
+Disallow: /anima/
 
-Sitemap: https://www.coderush.fr/sitemap.xml
+Sitemap: https://www.code-rush.fr/sitemap.xml

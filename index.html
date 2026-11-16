@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="MzzdvnJms9jfhmBtzHGOG1rC6vG__gvndeYAR5hFXu0" />
     <title>CodeRush | Développeur Full-Stack Freelance — Sites, applications & logiciels métier</title>
-    <meta name="description" content="Développeur Full-Stack Freelance : sites web, applications mobiles, e-commerce et logiciels métier (ERP). Expertise Next.js, TypeScript, Flutter, PHP, Supabase et WordPress.">
+    <meta name="description" content="Développeur Full-Stack Freelance : sites web 100% sur mesure (One-Page, Multi-Pages), applications mobiles, e-commerce et logiciels métier (ERP). Expertise Next.js, TypeScript, Flutter, PHP et Supabase.">
     <meta name="keywords" content="développeur, développeur web, développeur application, création site web, ecommerce, code, rush, code-rush, freelance, react, nextjs, flutter, wordpress, erp, logiciel métier">
     <meta name="author" content="CodeRush">
     <meta name="robots" content="index, follow">
@@ -49,7 +49,7 @@
           },
           "email": "mailto:coderush63@gmail.com",
           "telephone": "+33-6-83-98-23-84",
-          "knowsAbout": ["Next.js", "TypeScript", "React", "Flutter", "PHP", "MySQL", "Supabase", "WordPress", "Node.js"],
+          "knowsAbout": ["Next.js", "TypeScript", "React", "Flutter", "PHP", "MySQL", "Supabase", "Node.js", "Bootstrap"],
           "description": "Développeur Full-Stack Freelance spécialisé dans la création de sites web, d'applications mobiles et de logiciels métier (ERP)."
         },
         {
@@ -65,7 +65,7 @@
           "url": "https://www.code-rush.fr",
           "email": "coderush63@gmail.com",
           "telephone": "+33-6-83-98-23-84",
-          "priceRange": "€€",
+          "priceRange": "Sites à partir de 490 € — logiciels sur devis",
           "areaServed": "FR",
           "address": {
             "@type": "PostalAddress",
@@ -73,7 +73,7 @@
             "addressRegion": "Puy-de-Dôme",
             "addressCountry": "FR"
           },
-          "serviceType": ["Création de sites web", "Développement d'applications mobiles", "Logiciels métier et ERP", "E-commerce", "WordPress", "SEO"]
+          "serviceType": ["Création de sites web", "Développement d'applications mobiles", "Logiciels métier et ERP", "E-commerce", "SEO", "Développement sur mesure"]
         }
       ]
     }
@@ -542,6 +542,87 @@
 
         .about-list strong { color: var(--text); }
 
+        /* ===== Tarifs ===== */
+        .price-card {
+            position: relative;
+            padding: 2rem 1.8rem;
+            height: 100%;
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-card.price-featured {
+            border-color: rgba(108, 99, 255, 0.55);
+            box-shadow: 0 24px 60px -22px rgba(108, 99, 255, 0.45);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary-strong), var(--primary-dark));
+            color: #fff;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+            padding: .35rem .95rem;
+            box-shadow: 0 8px 18px -6px rgba(108, 99, 255, 0.6);
+        }
+
+        .price-value {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.05;
+            color: #fff;
+        }
+
+        .price-unit {
+            color: var(--muted);
+            font-size: .82rem;
+        }
+
+        .price-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .price-card ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: .5rem;
+            font-size: .88rem;
+            color: var(--muted);
+        }
+
+        .price-card ul li i {
+            position: absolute;
+            left: 0;
+            top: .18rem;
+            color: var(--secondary);
+        }
+
+        .price-card .btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .btn-ghost {
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ecebf5;
+            background: transparent;
+            font-weight: 500;
+            transition: border-color .25s ease, background .25s ease;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--primary-strong);
+            color: #fff;
+            background: rgba(108, 99, 255, 0.12);
+        }
+
         /* ===== Services ===== */
         .service-card {
             position: relative;
@@ -953,7 +1034,7 @@
             html { scroll-behavior: auto; }
             .reveal { opacity: 1; transform: none; transition: none; }
             .float-anim, .pulse-dot { animation: none; }
-            .project-img, .lift, .btn-gradient, .social-btn { transition: none; }
+            .project-img, .lift, .btn-gradient, .btn-ghost, .social-btn { transition: none; }
         }
 
         /* ===== Responsive ===== */
@@ -994,6 +1075,7 @@
                     <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tarifs">Tarifs</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-gradient rounded-pill px-3 py-2" href="#contact">Discutons <i class="fas fa-arrow-right ms-1 small"></i></a></li>
                 </ul>
@@ -1089,7 +1171,7 @@
                             <span class="chip"><i class="fas fa-database"></i>MySQL / PostgreSQL</span>
                             <span class="chip"><i class="fas fa-bolt"></i>Supabase</span>
                             <span class="chip"><i class="fab fa-node-js"></i>Node.js</span>
-                            <span class="chip"><i class="fab fa-wordpress"></i>WordPress</span>
+                            <span class="chip"><i class="fab fa-bootstrap"></i>Bootstrap / Tailwind</span>
                         </div>
                     </div>
 
@@ -1109,8 +1191,8 @@
                                 <span><strong>Boutiques en ligne</strong> — e-commerce, paiements, gestion de stocks</span>
                             </li>
                             <li>
-                                <i class="fab fa-wordpress"></i>
-                                <span><strong>Sites WordPress & blogs</strong> — thèmes personnalisés, performances, SEO</span>
+                                <i class="fas fa-globe"></i>
+                                <span><strong>Sites web sur mesure</strong> — vitrines monopages et multi-pages, SEO, performances</span>
                             </li>
                         </ul>
                     </div>
@@ -1176,7 +1258,7 @@
                         <h3>E-commerce</h3>
                         <p>Boutiques en ligne clés en main, du catalogue au paiement sécurisé.</p>
                         <ul>
-                            <li>Solutions sur mesure ou WooCommerce</li>
+                            <li>Solution sur mesure adaptée à vos volumes</li>
                             <li>Paiements en ligne</li>
                             <li>Gestion des stocks & commandes</li>
                             <li>Optimisation des conversions</li>
@@ -1185,14 +1267,14 @@
                 </div>
                 <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s">
                     <div class="service-card glass lift">
-                        <div class="service-icon"><i class="fab fa-wordpress"></i></div>
-                        <h3>WordPress</h3>
-                        <p>Sites WordPress sur mesure, rapides et faciles à administrer.</p>
+                        <div class="service-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Sites Web sur mesure</h3>
+                        <p>Sites vitrines monopages ou multi-pages, codés à la main — pas de template générique.</p>
                         <ul>
-                            <li>Thèmes personnalisés</li>
-                            <li>Plugins sur mesure</li>
-                            <li>Performances & sécurité</li>
-                            <li>Formation à l'administration</li>
+                            <li>One-Page &amp; multi-pages</li>
+                            <li>Design unique, responsive</li>
+                            <li>SEO &amp; Core Web Vitals</li>
+                            <li>Hébergement &amp; domaine en option</li>
                         </ul>
                     </div>
                 </div>
@@ -1210,6 +1292,114 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section id="tarifs" aria-label="Tarifs" style="background: linear-gradient(180deg, transparent, rgba(108,99,255,0.04) 50%, transparent);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="reveal">
+                    <span class="section-eyebrow"><i class="fas fa-tags"></i>Tarifs</span>
+                    <h2 class="display-6 fw-bold mb-3">Des formules <span class="text-gradient">claires</span>, 100&nbsp;% sur mesure</h2>
+                    <p class="section-lead">Pas de WordPress ni de template générique : chaque site est développé à la main, rapide et optimisé SEO. Le code et le nom de domaine vous appartiennent.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="price-card glass">
+                        <h3 class="h6 fw-bold text-white mb-1">Site One-Page</h3>
+                        <p class="text-secondary small mb-3">Vitrine monopage, idéale pour se lancer</p>
+                        <div class="d-flex align-items-baseline gap-2 mb-1">
+                            <span class="price-value">490&nbsp;€</span>
+                            <span class="price-unit">à partir de</span>
+                        </div>
+                        <ul class="mt-3 mb-4">
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Page unique au design sur mesure</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Responsive mobile &amp; tablette</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Formulaire de contact</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>SEO local &amp; vitesse optimisée</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Mise en ligne incluse</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Livraison sous ~2 semaines</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-ghost rounded-pill">Demander ce site</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.05s">
+                    <div class="price-card glass price-featured">
+                        <span class="price-badge"><i class="fas fa-star me-1" aria-hidden="true"></i>Le plus choisi</span>
+                        <h3 class="h6 fw-bold text-white mb-1">Site Multi-Pages</h3>
+                        <p class="text-secondary small mb-3">Vitrine complète, 5 à 7 pages</p>
+                        <div class="d-flex align-items-baseline gap-2 mb-1">
+                            <span class="price-value">990&nbsp;€</span>
+                            <span class="price-unit">à partir de</span>
+                        </div>
+                        <ul class="mt-3 mb-4">
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Tout le contenu de la formule One-Page</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Pages sur mesure (services, équipe, galerie…)</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Blog ou rubrique actualités</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Emails professionnels inclus 1 an</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>SEO renforcé + statistiques de visites</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Formation à la prise en main</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-gradient rounded-pill">Demander ce site</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s">
+                    <div class="price-card glass">
+                        <h3 class="h6 fw-bold text-white mb-1">Logiciels &amp; Applications</h3>
+                        <p class="text-secondary small mb-3">ERP, apps mobiles, e-commerce</p>
+                        <div class="d-flex align-items-baseline gap-2 mb-1">
+                            <span class="price-value">Devis</span>
+                            <span class="price-unit">sur mesure</span>
+                        </div>
+                        <ul class="mt-3 mb-4">
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Analyse de votre besoin offerte</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Périmètre &amp; devis détaillé sans engagement</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Développement itératif, par étapes</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Maintenance &amp; évolutions possibles</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-ghost rounded-pill">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 reveal">
+                    <div class="price-card glass p-4">
+                        <h3 class="h6 fw-bold text-white mb-2"><i class="fas fa-server me-2" aria-hidden="true" style="color: var(--secondary);"></i>Hébergement &amp; nom de domaine</h3>
+                        <div class="d-flex align-items-baseline gap-2 mb-2">
+                            <span class="price-value" style="font-size:1.6rem;">180&nbsp;€/an</span>
+                            <span class="price-unit">optionnel</span>
+                        </div>
+                        <p class="text-secondary small mb-0">
+                            Nom de domaine, hébergement rapide, certificat SSL, adresses email professionnelles
+                            et sauvegardes — tout est configuré pour vous. 0&nbsp;€ si vous avez déjà votre hébergement.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal" style="transition-delay:.05s">
+                    <div class="price-card glass p-4">
+                        <h3 class="h6 fw-bold text-white mb-2"><i class="fas fa-shield-halved me-2" aria-hidden="true" style="color: var(--secondary);"></i>Maintenance &amp; sérénité</h3>
+                        <div class="d-flex align-items-baseline gap-2 mb-2">
+                            <span class="price-value" style="font-size:1.6rem;">29&nbsp;€/mois</span>
+                            <span class="price-unit">optionnelle</span>
+                        </div>
+                        <p class="text-secondary small mb-0">
+                            Mises à jour, sauvegardes hebdomadaires, petites modifications et assistance prioritaire.
+                            Sans engagement, résiliable à tout moment — ou gérez votre site vous-même : il vous appartient.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-secondary small mt-5 mb-0 reveal">
+                <i class="fas fa-circle-info me-1" aria-hidden="true"></i>
+                Prix HT. Acompte de 30&nbsp;% au démarrage, solde à la livraison — devis détaillé gratuit sous 48&nbsp;h, sans engagement.
+            </p>
         </div>
     </section>
 
@@ -1526,6 +1716,7 @@
                     <a href="#hero" class="footer-link">Accueil</a>
                     <a href="#about" class="footer-link">À propos</a>
                     <a href="#services" class="footer-link">Services</a>
+                    <a href="#tarifs" class="footer-link">Tarifs</a>
                     <a href="#projects" class="footer-link">Projets</a>
                     <a href="#contact" class="footer-link">Contact</a>
                 </nav>

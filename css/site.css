@@ -276,6 +276,36 @@
             }
         }
 
+        .dropdown-menu {
+            background: rgba(16, 16, 32, 0.97);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 0.5rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 14px 40px -12px rgba(0, 0, 0, 0.65);
+        }
+
+        .dropdown-item {
+            color: var(--muted);
+            border-radius: 0.6rem;
+            padding: 0.55rem 1rem;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background: rgba(108, 99, 255, 0.15);
+            color: #fff;
+        }
+
+        @media (min-width: 992px) {
+            .navbar .dropdown-menu {
+                margin-top: 0.75rem;
+            }
+        }
+
         .nav-link {
             position: relative;
             padding: 0.5rem 0.9rem !important;

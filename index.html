@@ -120,7 +120,7 @@
                     <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" id="menuPrestations">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" id="menuPrestations">
                             Prestations
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="menuPrestations">
@@ -858,10 +858,13 @@
             // Année dynamique
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Fermeture du menu mobile après clic
+            // Fermeture du menu mobile après clic — sauf sur le déclencheur
+            // du menu déroulant "Prestations" (href="#") qui doit ouvrir le
+            // sous-menu sans fermer le burger.
             const collapseEl = document.getElementById('navbarNav');
             collapseEl.addEventListener('click', function (e) {
-                if (e.target.closest('a') && collapseEl.classList.contains('show')) {
+                const link = e.target.closest('a');
+                if (link && link.getAttribute('href') !== '#' && collapseEl.classList.contains('show')) {
                     bootstrap.Collapse.getInstance(collapseEl).hide();
                 }
             });
